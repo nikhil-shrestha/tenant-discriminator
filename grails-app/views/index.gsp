@@ -61,11 +61,11 @@
         </p>
 
         <div id="controllers" role="navigation">
-            <h2>Available Controllers:</h2>
+            <h2>Available Manufacturers:</h2>
             <ul>
-                <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+                <g:each var="m" in="${manufacturers}">
                     <li class="controller">
-                        <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
+                        <g:link controller="manufacturer" action="select" id="${m.name}">${m.name}</g:link>
                     </li>
                 </g:each>
             </ul>
